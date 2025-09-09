@@ -1,0 +1,3 @@
+alterar informações de musicas existentes
+busca por genero musical
+busca por musicas de um artista
