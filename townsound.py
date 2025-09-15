@@ -1,6 +1,6 @@
 musicas = []
 artistas = []
-generos = []
+generos = []                                #Lucas Bueno
 duracoes = []
 playlist = []
 nome_playlist = ""
@@ -8,7 +8,7 @@ nome_playlist = ""
 
 def menu():
     titulo  = "Bem vindo a TownSound!"
-    largura = 50
+    largura = 50                                #Lucas Bueno
     print(titulo.center(largura))
 
 
@@ -16,7 +16,7 @@ def cadastrar_musica():
     nome_musica = input("Digite o nome da música: ")
     tempo_musica = float(input("Digite o tempo: "))
     genero = input("Digite o gênero: ")
-    artista_musica = input("Digite o nome do artista: ")
+    artista_musica = input("Digite o nome do artista: ")        #Miguel Gonçales
     
     musicas.append(nome_musica)
     artistas.append(artista_musica)
@@ -29,12 +29,14 @@ cadastrar_musica()
 
 def criar_playlist():
     global nome_playlist
-    nome_playlist = input("Digite o nome da nova playlist: ")
+    nome_playlist = input("Digite o nome da nova playlist: ")        #Pedro Henrique
     print(f"Playlist '{nome_playlist}' criada com sucesso!")
+
+
 def adicionar_musica_playlist():
     if nome_playlist == "":
         print("Nenhuma playlist criada. Crie uma playlist primeiro!")
-        return
+        return                                                                                     #Heitor Melo
     if not musicas:
         print("Nenhuma música cadastrada para adicionar.")
         return
@@ -59,7 +61,7 @@ def iniciar_playlist():
         return
     if not playlist:
         print("A playlist está vazia.")
-        return
+        return                                                                                                #Lucas Alves
     print(f"Tocando playlist '{nome_playlist}':")
     for nome in playlist:
         idx = musicas.index(nome)
@@ -75,7 +77,7 @@ def tocar_musica():
         print(f"{i+1} - {musicas[i]} | {artistas[i]} | {generos[i]} | {duracoes[i]}")
     try:
         indice = int(input("Digite o número da música que deseja tocar: ")) - 1
-        if 0 <= indice < len(musicas):
+        if 0 <= indice < len(musicas):                                                                                    #Miguel Gonçales
             print(f"Tocando '{musicas[indice]}' de {artistas[indice]} ({generos[indice]}, {duracoes[indice]} min)...")
         else:
             print("Índice inválido.")
@@ -91,7 +93,7 @@ def remover_musica():
     for i in range(len(musicas)):
         print(f"{i+1} - {musicas[i]} | {artistas[i]} | {generos[i]} | {duracoes[i]}")
     try:
-        indice = int(input("Digite o número da música que deseja remover: ")) - 1
+        indice = int(input("Digite o número da música que deseja remover: ")) - 1                                    #Heitor Melo
         if 0 <= indice < len(musicas):
             nome_remover = musicas[indice]
             musicas.pop(indice)
@@ -108,7 +110,7 @@ def remover_musica():
         
 
 def sair():
-    print("Obrigado por usar o TownSound! Até a próxima.")
+    print("Obrigado por usar o TownSound! Até a próxima.")            #Pedro Henrique
     exit()
 
 
@@ -121,7 +123,7 @@ def funcoes():
         print("5 - Iniciar playlist")
         print("6 - Tocar música")
         print("7 - Sair")
-        escolha = int(input("Escolha o número da opção: "))
+        escolha = int(input("Escolha o número da opção: "))                                                #Lucas Alves e Miguel
         if escolha == 1:
             cadastrar_musica()
         elif escolha == 2:
