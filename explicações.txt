@@ -1,0 +1,21 @@
+exemplo = [] --> serve para criar uma lista vazia
+
+.append --> serve para adicionar um dado a lista
+
+.pop --> serve para remover um dado da lista
+
+for i in range --> usado para criar um laço de repetição que começa por zero e percorre até o último dado.
+
+for i in range(len) --> usado para percorrer os índices de uma lista, começa por zero.
+
+if exemplo_nome == "" --> verifica se a variável exeplo_nome está vazia
+
+print(f"{i+1} - {musicas[i]} | {artistas[i]} | {generos[i]} | {duracoes[i]}") --> imprime as informações da lista, enumarando em sequencia de seus índices.
+
+idx = musicas.index(nome_escolhido) --> Ela procura o nome da música que a pessoa escolheu (nome_escolhido) dentro da lista musicas, e guarda o índice (posição) onde essa música está na variável idx.
+
+if 0 <= indice < len(musicas): --> Se o número indice for maior ou igual a 0 e menor que o tamanho da lista musicas, então é um índice válido.
+
+indice = int(input("Digite o número da música que deseja tocar: ")) - 1 --> subtrai o número por 1, pois normalmente o usuario começa a contagem por 1. EXEMPLO: se o user digitar 2 (2-1=1) será o dado de índice 1
+
+
